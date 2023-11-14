@@ -1,15 +1,10 @@
-import ReactDOM from 'react-dom/client';
-// Bringing in the required imports from 'react-router-dom' to set up application routing behavior
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import App from './App';
-import Error from './pages/Error';
-import Loading from './components/Loading.jsx';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import Work from './pages/Work';
+import Loading from './components/Loading';
+import { Error, Home, Contact, Code, Photography } from './pages';
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -20,11 +15,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Home />
       },
       {
-        path: '/Work',
-        element: <Work />
+        path: '/Code',
+        element: <Code />
+      },
+      {
+        path: '/Photography',
+        element: <Photography />
       },
       {
         path: '/Contact',
@@ -34,6 +33,9 @@ const router = createBrowserRouter([
   }
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} fallbackElement={<Loading />} />
+let root = createRoot(document.getElementById('root'));
+root.render(
+  <StrictMode>
+    <RouterProvider router={router} fallbackElement={<Loading />} />
+  </StrictMode>
 );
