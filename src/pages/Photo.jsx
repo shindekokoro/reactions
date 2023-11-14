@@ -1,10 +1,4 @@
-import { useEffect } from 'react';
-
 export default function Photo() {
-  useEffect(() => {
-    document.title = 'Photography Projects';
-  }, []);
-
   return (
     <ul className="work-container">
       <li className="zack-and-hillary">

@@ -1,10 +1,4 @@
-import { useEffect } from 'react';
-
 export default function Code() {
-  useEffect(() => {
-    document.title = 'Programming Projects';
-  }, []);
-
   return (
     <ul className="work-container">
       <li className="grow-box">

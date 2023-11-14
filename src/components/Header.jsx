@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import MuiAppBar from '@mui/material/AppBar';
 import MuiDrawer from '@mui/material/Drawer';
@@ -62,9 +62,9 @@ const getTitle = (path) => {
     case '/Contact':
       return 'Contact Me';
     case '/Code':
-      return 'Programming Projects';
-    case '/Photography':
-      return 'Photography Projects';
+      return 'Coding Projects';
+    case '/Photo':
+      return 'Photo Projects';
     default:
       return 'Error';
   }
@@ -74,6 +74,11 @@ const getTitle = (path) => {
 // We assign them to their own variable names
 function Header() {
   const currentPage = useLocation().pathname;
+  const title = getTitle(currentPage);
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
   const [open, setOpen] = useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -106,7 +111,7 @@ function Header() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              {getTitle(currentPage)}
+              {title}
             </Typography>
           </Toolbar>
         </AppBar>
