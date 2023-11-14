@@ -26,11 +26,11 @@ export default function Nav() {
         <ListItemText primary="Programming Projects" />
       </ListItemButton>
 
-      <ListItemButton component={Link} to="/Photography">
+      <ListItemButton component={Link} to="/Photo">
         <ListItemIcon>
           <CameraIcon sx={{ color: 'primary.light' }} />
         </ListItemIcon>
-        <ListItemText primary="Photography Projects" />
+        <ListItemText primary="Photo Projects" />
       </ListItemButton>
 
       <ListItemButton component={Link} to="/Contact">

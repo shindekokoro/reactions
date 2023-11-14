@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App';
 import Loading from './components/Loading';
-import { Error, Home, Contact, Code, Photography } from './pages';
+import { Error, Home, Contact, Code, Photo } from './pages';
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
         element: <Code />
       },
       {
-        path: '/Photography',
-        element: <Photography />
+        path: '/Photo',
+        element: <Photo />
       },
       {
         path: '/Contact',
