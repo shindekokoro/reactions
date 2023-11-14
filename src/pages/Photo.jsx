@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function Work() {
+export default function Photo() {
   useEffect(() => {
     document.title = 'Photography Projects';
   }, []);

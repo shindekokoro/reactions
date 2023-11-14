@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function Work() {
+export default function Code() {
   useEffect(() => {
     document.title = 'Programming Projects';
   }, []);
