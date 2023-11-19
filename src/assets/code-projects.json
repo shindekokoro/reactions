@@ -1,0 +1,27 @@
+[
+  {
+    "link": "https://github.com/shindekokoro/grow-box",
+    "title": "grow-box",
+    "img":"grow-box.png",
+    "technology": "NODE / chart.js / express",
+    "featured": true
+  },
+  {
+    "link": "https://shindekokoro.github.io/concert-groupie/",
+    "title": "Concert Groupie",
+    "img":"concert-groupie.jpg",
+    "technology": "HTML / JS / CSS"
+  },
+  {
+    "link": "https://www.npmjs.com/package/homebridge-poweredup",
+    "title": "homebridge-poweredup",
+    "img":"homebridge-poweredup.png",
+    "technology": "NODE / IoT"
+  },
+  {
+    "link": "https://shindekokoro.github.io/module01-CodeRefactor/",
+    "title": "Code Refactor 01",
+    "img":"01-html-css-git-homework.png",
+    "technology": "HTML / SEO Optimization"
+  }
+]
