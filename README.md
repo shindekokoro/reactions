@@ -18,7 +18,7 @@ Reaction is a personal REACT based portfolio web application.
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/shindekokoro/reactions/main/assets/images/preview.png">
+<img src="https://raw.githubusercontent.com/shindekokoro/reactions/main/preview.png">
 </p>
 
 ## License
