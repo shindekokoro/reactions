@@ -1,3 +1,4 @@
+import { Container, Typography } from '@mui/material';
 import { useRouteError } from 'react-router-dom';
 
 export default function ErrorPage() {
@@ -5,12 +6,14 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div id="error-page">
-      <h1>{error.status}</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
-    </div>
+    <Container id="error-page">
+      <Typography variant="h1">{error.status}</Typography>
+      <Typography variant="body1">
+        Sorry, an unexpected error has occurred.
+      </Typography>
+      <Typography variant="body2">
+        {error.statusText || error.message}
+      </Typography>
+    </Container>
   );
 }
