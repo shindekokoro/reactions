@@ -1,15 +1,10 @@
 import {
-  Link,
   List,
-  ListItem,
   ListItemButton,
   ListItemIcon,
   ListItemText
 } from '@mui/material';
-import { GrPhone } from 'react-icons/gr';
-import { GrMail } from 'react-icons/gr';
-import { GrLinkedin } from 'react-icons/gr';
-import { GrGithub } from 'react-icons/gr';
+import { GrPhone, GrMail, GrLinkedin, GrGithub } from 'react-icons/gr';
 
 const contactInfo = [
   {
@@ -38,11 +33,7 @@ export default function Contact() {
   return (
     <List>
       {contactInfo.map((contact) => (
-        <ListItemButton
-          key={contact.link}
-          to={contact.link}
-          target="_blank"
-        >
+        <ListItemButton key={contact.link} to={contact.link} target="_blank">
           <ListItemIcon>{contact.icon}</ListItemIcon>
           <ListItemText primary={contact.text} />
         </ListItemButton>
