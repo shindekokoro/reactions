@@ -1,0 +1,40 @@
+{
+  "tagline": "To be able to learn from my experiences and to further my career with a better understanding of the world around me.",
+  "jobs": [
+    {
+      "company": "Lumen Technologies",
+      "title": "Network Technician",
+      "timeFrame": "2022-Present",
+      "responsibilities": [
+        "Installing computer networks, connections and cabling.",
+        "Performing troubleshooting to identify system failures and bottlenecks to ensure long term efficiency of network.",
+        "Test and configuring software, maintain and repair hardware and peripheral devices.",
+        "Evaluate network performance and find ways for improvement.",
+        "Providing expertise and direction to help train coworkers about unknown systems and setups."
+      ]
+    },
+    {
+      "company": "Syringa Networks",
+      "title": "OSP Technician",
+      "timeFrame": "2020-2022",
+      "responsibilities": [
+        "Train and develop field locate technicians to improve their knowledge, skills, and professional growth.",
+        "Define, maintain and communicate clear goals for field technicians to do their jobs effectively and efficiently.",
+        "Locate underground fiber optics and accurately marking the location.",
+        "Maintaining daily contact with other locators, OSP Team, and contractors discussing locate issues.",
+        "Assist locate technicians in the completion of their workload when necessary.",
+        "Use provided maps to assist in the identification of underground fiber optics. As well as work closely with GIS and OSP Teams to ensure that those maps are accurate for the network.",
+        "Use fusion splicer to splice fiber drops for customers.",
+        "Provide and lead a safe work environment by being knowledgeable of and enforcing all state, local, federal safety regulations and company safety policies."
+      ]
+    }
+  ],
+  "skills": [
+    "Frontend — CSS, HTML, React",
+    "Database — MySql, MongoDB",
+    "Backend — Node.js, Express",
+    "Manage Execution — Organize, coordinate, and manage sources, time and people to achieve goals and company objectives. Set priorities, and work effectively to get things done.",
+    "Drives for Results — Foster a sense of urgency by setting clear expectations and routines. Take initiative to proactively address issues.",
+    "Collaborates — Work with others to meet the needs of the business. Create strong relationships by fostering an inclusive culture."
+  ]
+}
