@@ -1,7 +1,7 @@
-import Code from './Code';
-import Contact from './Contact';
 import Error from './Error';
 import Home from './Home';
-import Photo from './Photo';
+import Projects from './Projects';
+import Contact from './Contact';
+import Resume from './Resume';
 
-export { Code, Contact, Error, Home, Photo };
+export { Error, Home, Projects, Contact, Resume };
