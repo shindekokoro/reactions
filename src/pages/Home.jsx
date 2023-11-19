@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <img
-        src="./src/assets/profile.jpg"
+        src="./profile.jpg"
         alt="Profile Photo of Brian Whisler"
         width={200}
         loading="true"
