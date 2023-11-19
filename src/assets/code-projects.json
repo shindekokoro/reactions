@@ -16,7 +16,15 @@
     "link": "https://www.npmjs.com/package/homebridge-poweredup",
     "title": "homebridge-poweredup",
     "img":"homebridge-poweredup.png",
-    "technology": "NODE / IoT"
+    "technology": "NODE / IoT",
+    "featured":true
+  },
+  {
+    "link": "https://www.npmjs.com/package/git-a-readme",
+    "title": "git-a-readme",
+    "img":"git-a-readme.png",
+    "technology": "NODE",
+    "featured":false
   },
   {
     "link": "https://github.com/shindekokoro/grow-box",
