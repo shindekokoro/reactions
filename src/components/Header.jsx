@@ -1,11 +1,19 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import MuiAppBar from '@mui/material/AppBar';
-import MuiDrawer from '@mui/material/Drawer';
-import { Toolbar, IconButton, Divider, List, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import {
+  Toolbar,
+  IconButton,
+  Divider,
+  List,
+  Typography,
+  useMediaQuery,
+  AppBar as MuiAppBar,
+  Drawer as MuiDrawer
+} from '@mui/material';
+import { styled, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import DownloadIcon from '@mui/icons-material/Download';
 import Nav from './Nav';
 
 const drawerWidth = 240;
@@ -47,9 +55,9 @@ const Drawer = styled(MuiDrawer, {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
       }),
-      width: theme.spacing(7),
+      width: theme.spacing(0),
       [theme.breakpoints.up('sm')]: {
-        width: theme.spacing(9)
+        width: theme.spacing(7)
       }
     })
   }
@@ -65,10 +73,27 @@ const getTitle = (path) => {
       return 'Coding Projects';
     case '/Photo':
       return 'Photo Projects';
+    case '/Resume':
+      return 'Resume';
     default:
       return 'Error';
   }
 };
+
+function showDownloadButton(isLargerScreen) {
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.download = `Resume.pdf`;
+    link.href = './Resume_2023.pdf';
+    link.click();
+  };
+  return (
+    <IconButton color="inherit" onClick={downloadResume}>
+      {isLargerScreen ? <Typography>Download</Typography> : ''}
+      <DownloadIcon />
+    </IconButton>
+  );
+}
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
@@ -84,55 +109,59 @@ function Header() {
     setOpen(!open);
   };
 
+  const screen = useTheme();
+  const isLargerScreen = useMediaQuery(screen.breakpoints.up('sm'));
+
   return (
     <>
       <AppBar position="absolute" open={open}>
-          <Toolbar
+        <Toolbar
+          sx={{
+            pr: '24px' // keep right padding when drawer closed
+          }}
+        >
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            onClick={toggleDrawer}
             sx={{
-              pr: '24px' // keep right padding when drawer closed
+              marginRight: '36px',
+              ...(open && { display: 'none' })
             }}
           >
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={toggleDrawer}
-              sx={{
-                marginRight: '36px',
-                ...(open && { display: 'none' })
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
-            >
-              {title}
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <Drawer variant="permanent" open={open}>
-          <Toolbar
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'flex-end',
-              px: [1]
-            }}
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            component="h1"
+            variant="h6"
+            color="inherit"
+            noWrap
+            sx={{ flexGrow: 1 }}
           >
-            <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
-            </IconButton>
-          </Toolbar>
-          <Divider />
-          <List component="nav">
-            <Nav />
-          </List>
-        </Drawer>
+            {title}
+          </Typography>
+          {title === 'Resume' ? showDownloadButton(isLargerScreen) : ''}
+        </Toolbar>
+      </AppBar>
+      <Drawer variant="permanent" open={open}>
+        <Toolbar
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+            px: [1]
+          }}
+        >
+          <IconButton onClick={toggleDrawer} color="inherit">
+            <ChevronLeftIcon />
+          </IconButton>
+        </Toolbar>
+        <Divider />
+        <List component="nav">
+          <Nav location={currentPage} />
+        </List>
+      </Drawer>
     </>
   );
 }
