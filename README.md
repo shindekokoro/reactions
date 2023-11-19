@@ -16,7 +16,7 @@ Reaction is a personal REACT based portfolio web application.
 
 ## Usage
 
-
+Live Portfolio Link: [https://brian-whisler.netlify.app](https://brian-whisler.netlify.app)
 <p align="center">
 <img src="https://raw.githubusercontent.com/shindekokoro/reactions/main/preview.png">
 </p>
