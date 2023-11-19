@@ -8,44 +8,55 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
-export default function Nav() {
-  // const currentPage = useLocation().pathname;
+function ListItem(props) {
+  const { to, text, icon } = props;
+  return (
+    <ListItemButton component={Link} to={to}>
+      <ListItemIcon>{icon}</ListItemIcon>
+      <ListItemText primary={text} />
+    </ListItemButton>
+  );
+}
+
+export default function Nav(props) {
+  const { location } = props;
+  const iconColor = (route) => {
+    return {
+      color: location === route ? 'primary.lightBack' : 'primary.light'
+    };
+  };
+  
   return (
     <>
-      <ListItemButton component={Link} to="/">
-        <ListItemIcon>
-          <HomeIcon sx={{ color: 'primary.light' }} />
-        </ListItemIcon>
-        <ListItemText primary="About Me" />
-      </ListItemButton>
+      <ListItem
+        to="/"
+        text="About Me"
+        icon={<HomeIcon sx={iconColor('/')} />}
+      />
 
-      <ListItemButton component={Link} to="/Code">
-        <ListItemIcon>
-          <CodeIcon sx={{ color: 'primary.light' }} />
-        </ListItemIcon>
-        <ListItemText primary="Programming Projects" />
-      </ListItemButton>
+      <ListItem
+        to="/Code"
+        text="Code Portfolio"
+        icon={<CodeIcon sx={iconColor('/Code')} />}
+      />
 
-      <ListItemButton component={Link} to="/Photo">
-        <ListItemIcon>
-          <CameraIcon sx={{ color: 'primary.light' }} />
-        </ListItemIcon>
-        <ListItemText primary="Photo Projects" />
-      </ListItemButton>
+      <ListItem
+        to="/Photo"
+        text="Photo Portfolio"
+        icon={<CameraIcon sx={iconColor('/Photo')} />}
+      />
 
-      <ListItemButton component={Link} to="/Contact">
-        <ListItemIcon>
-          <ContactMailIcon sx={{ color: 'primary.light' }} />
-        </ListItemIcon>
-        <ListItemText primary="Contact Me" />
-      </ListItemButton>
+      <ListItem
+        to="/Contact"
+        text="Contact Me"
+        icon={<ContactMailIcon sx={iconColor('/Contact')} />}
+      />
 
-      <ListItemButton href="./Resume_2023.pdf" download>
-        <ListItemIcon>
-          <HistoryEduIcon sx={{ color: 'primary.light' }} />
-        </ListItemIcon>
-        <ListItemText primary="Resume" />
-      </ListItemButton>
+      <ListItem
+        to="/Resume"
+        text="Resume"
+        icon={<HistoryEduIcon sx={iconColor('/Resume')} />}
+      />
     </>
   );
 }
