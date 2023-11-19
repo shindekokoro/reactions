@@ -8,4 +8,13 @@ export default defineConfig({
     port: 8080,
     open: true,
   },
+  build: {
+    rollupOptions: {
+        external: [
+            "react", // ignore react stuff
+            "react-dom",
+            "react-icons/gr"
+        ],
+    }
+},
 });
