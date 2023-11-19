@@ -13,7 +13,8 @@ export default defineConfig({
         external: [
             "react", // ignore react stuff
             "react-dom",
-            "react-icons/gr"
+            "react-icons/gr",
+            "react-icons/di"
         ],
     }
 },
