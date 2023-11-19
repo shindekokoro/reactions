@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <Error />,
+    errorElement: <App error={<Error />} />,
     children: [
       {
         index: true,
@@ -19,11 +19,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/Code',
-        element: <Projects type='code' />
+        element: <Projects type="code" />
       },
       {
         path: '/Photo',
-        element: <Projects type='photo' />
+        element: <Projects type="photo" />
       },
       {
         path: '/Contact',
