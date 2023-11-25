@@ -1,1 +1,2 @@
-/* /
+# Redirect all pages for index.html to handle routing
+/* /index.html 200
