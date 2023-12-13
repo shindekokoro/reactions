@@ -1,5 +1,5 @@
 {
-  "tagline": "To be able to learn from my experiences and to further my career with a better understanding of the world around me.",
+  "tagline": "Full Stack web developer with 10+ years of customer facing work experience in Computer Networking and Customer Service Positions. Looking to make a lateral transition into web / software development. ",
   "jobs": [
     {
       "company": "Lumen Technologies",
@@ -30,11 +30,12 @@
     }
   ],
   "skills": [
-    "Frontend — CSS, HTML, React",
-    "Database — MySql, MongoDB",
-    "Backend — Node.js, Express",
+    "Languages: JavaScript ES6+ | CSS3 | HTML5",
+    "Databases: MySQL | MongoDB",
+    "Tools: express | NODE.js | handlebars | jQuery | Bootstrap, MUI | Apache | NGINX | Photoshop | InDesign | Linux | macOS | Windows",
+    "Soft: Collaboration | Manage Execution | Drive for Results",
+    "Collaboration — Work with others to meet the needs of the business. Create strong relationships by fostering an inclusive culture.",
     "Manage Execution — Organize, coordinate, and manage sources, time and people to achieve goals and company objectives. Set priorities, and work effectively to get things done.",
-    "Drives for Results — Foster a sense of urgency by setting clear expectations and routines. Take initiative to proactively address issues.",
-    "Collaborates — Work with others to meet the needs of the business. Create strong relationships by fostering an inclusive culture."
+    "Drives for Results — Foster a sense of urgency by setting clear expectations and routines. Take initiative to proactively address issues."
   ]
 }
