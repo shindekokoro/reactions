@@ -84,7 +84,7 @@ function showDownloadButton(isLargerScreen) {
   const downloadResume = () => {
     const link = document.createElement('a');
     link.download = `Resume.pdf`;
-    link.href = './Resume_2023.pdf';
+    link.href = './Resume_2024.pdf';
     link.click();
   };
   return (
