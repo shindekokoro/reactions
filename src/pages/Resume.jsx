@@ -8,7 +8,7 @@ import resume from '../assets/resume.json';
 import { KeyboardArrowRight } from '@mui/icons-material';
 
 export default function Resume() {
-  let jobs = resume.jobs.map((job) => {});
+
   return (
     <>
       <Container>
