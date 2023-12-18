@@ -5,6 +5,7 @@ import {
   ListItemText
 } from '@mui/material';
 import { GrPhone, GrMail, GrLinkedin, GrGithub } from 'react-icons/gr';
+import { Form } from '../components';
 
 const contactInfo = [
   {
@@ -31,13 +32,16 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <List>
-      {contactInfo.map((contact) => (
-        <ListItemButton key={contact.link} to={contact.link} target="_blank">
-          <ListItemIcon>{contact.icon}</ListItemIcon>
-          <ListItemText primary={contact.text} />
-        </ListItemButton>
-      ))}
-    </List>
+    <>
+      <Form />
+      <List>
+        {contactInfo.map((contact) => (
+          <ListItemButton key={contact.link} to={contact.link} target="_blank">
+            <ListItemIcon>{contact.icon}</ListItemIcon>
+            <ListItemText primary={contact.text} />
+          </ListItemButton>
+        ))}
+      </List>
+    </>
   );
 }
