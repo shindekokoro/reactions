@@ -11,8 +11,6 @@ function Form() {
     // Getting the value and name of the input which triggered the change
     const { name, value } = e.target;
 
-    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
-    console.log(e.target);
     switch (name) {
       case 'fullName':
         return setName(value);
@@ -28,7 +26,7 @@ function Form() {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    fetch('http://localhost:3002/send', {
+    fetch('https://send.spinda.dev', {
       method: 'POST',
       body: JSON.stringify({ name: fullName, email: eMail, message: message }),
       headers: {
